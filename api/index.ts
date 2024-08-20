@@ -1,4 +1,4 @@
-export async default function handler(_request) {
+export default async function handler(_request) {
     const dashboardResponse = await fetch('https://bd.bangbang93.com/openbmclapi/metric/dashboard');
     const dashboardData = await dashboardResponse.json();
   
