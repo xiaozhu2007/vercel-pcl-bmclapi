@@ -15,5 +15,5 @@
       "source": "/:match*",
       "destination": "https://www.liuzhen932.top/posts/default/vercel-speedup"
     }
-  }
+  ]
 }
