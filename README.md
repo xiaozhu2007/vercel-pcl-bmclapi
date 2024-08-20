@@ -11,5 +11,3 @@
 # 一键部署
 
 [![一键部署到 Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/xiaozhu2007/vercel-pcl-bmclapi&repository-name=my-bmclapi&project-name=pcl-bmclapi)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fxiaozhu2007%2Fvercel-pcl-bmclapi&project-name=pcl-bmclapi&repository-name=my-pcl-bmclapi&demo-title=PHP%20Demo&demo-description=Running%20on%20Vercel&demo-url=https%3A%2F%2Fcf-oba-bd.mcmirror.top%2F)
