@@ -39,14 +39,14 @@ header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓�
         </Grid.RowDefinitions>
             <local:MyCard Title="OpenBMCLAPI 仪表盘 (优化版)" Margin="0,0,0,5" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ToolTip="当前仪表盘缓存的获取时间">
                     <TextBlock Margin="25,12,20,10" HorizontalAlignment="Right">
-                        <?php print $genTime; ?> (UTC+8)
+                        <?php echo $genTime; ?> (UTC+8)
                     </TextBlock>
             </local:MyCard>
 
             <local:MyCard Title="在线节点" Margin="0,0,2,4" Grid.Row="1" Grid.Column="0">
                 <StackPanel Margin="25,40,23,15">
                     <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
-                        <Run Text="<?php print $curNodes; ?>" FontSize="26"/> 个
+                        <Run Text="<?php echo $curNodes; ?>" FontSize="26"/> 个
                     </TextBlock>
                 </StackPanel>
             </local:MyCard>
@@ -54,7 +54,7 @@ header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓�
             <local:MyCard Title="出网带宽" Margin="2,0,0,4" Grid.Row="1" Grid.Column="1">
                 <StackPanel Margin="25,40,23,15">
                     <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
-                        <Run Text="<?php print $curBandwidth; ?>" FontSize="26"/> Mbps
+                        <Run Text="<?php echo $curBandwidth; ?>" FontSize="26"/> Mbps
                     </TextBlock>
                 </StackPanel>
             </local:MyCard>
@@ -62,7 +62,7 @@ header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓�
             <local:MyCard Title="今日流量" Margin="0,0,2,4" Grid.Row="2" Grid.Column="0">
                 <StackPanel Margin="25,40,23,15">
                 <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
-                        <Run Text="<?php print $todayData; ?>" FontSize="26"/> TiB
+                        <Run Text="<?php echo $todayData; ?>" FontSize="26"/> TiB
                     </TextBlock>
                 </StackPanel>
             </local:MyCard>
@@ -70,7 +70,7 @@ header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓�
             <local:MyCard Title="今日请求数" Margin="2,0,0,4" Grid.Row="2" Grid.Column="1">
                 <StackPanel Margin="25,40,23,15">
                     <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
-                        <Run Text="<?php print $todayHit; ?>" FontSize="26"/> 次
+                        <Run Text="<?php echo $todayHit; ?>" FontSize="26"/> 次
                     </TextBlock>
                 </StackPanel>
             </local:MyCard>
@@ -78,7 +78,7 @@ header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓�
             <local:MyCard Title="主控负载" Margin="0,0,0,4" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
                 <StackPanel Margin="25,40,23,15">
                     <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
-                        <Run Text="<?php print $load; ?>" FontSize="26"/> %
+                        <Run Text="<?php echo $load; ?>" FontSize="26"/> %
                     </TextBlock>
                     <TextBlock Margin="0,0,0,4" HorizontalAlignment="Center" TextWrapping="Wrap">
                         （此处数据超过 100% 是正常现象）
@@ -86,7 +86,7 @@ header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓�
                 </StackPanel>
             </local:MyCard>
 
-            <local:MyButton Margin="2,0,0,0" Grid.Row="4" Grid.Column="1" ColorType="Highlight" Text="查看赞助商信息" EventType="打开网页" EventData="<?php print $sponsorUrl?>" ToolTip="查看来自 OpenBMCLAPI 赞助商的广告: <?php print $sponsorId; ?>" />
+            <local:MyButton Margin="2,0,0,0" Grid.Row="4" Grid.Column="1" ColorType="Highlight" Text="查看赞助商信息" EventType="打开网页" EventData="<?php echo $sponsorUrl; ?>" ToolTip="查看来自 OpenBMCLAPI 赞助商的广告: <?php echo $sponsorId; ?>" />
             <local:MyButton Margin="0,0,2,0" Grid.Row="4" Grid.Column="0" Text="刷新" EventType="刷新主页" ToolTip="重新加载数据，请勿频繁点击" />
     </Grid>
 <!-- 
