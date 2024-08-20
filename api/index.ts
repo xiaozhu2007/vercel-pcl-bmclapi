@@ -1,4 +1,4 @@
-export default function handler(request, response) {
+export default function handler(_request) {
     const dashboardResponse = await fetch('https://bd.bangbang93.com/openbmclapi/metric/dashboard');
     const dashboardData = await dashboardResponse.json();
   
@@ -80,7 +80,8 @@ export default function handler(request, response) {
         
   </Grid>
     `;
-  response.status(200).text(xml, {
+  return new Response(xml, {
+    status: 200,
     headers: {
         'Content-Type': 'text/html',
         'Cache-Control': 'public, max-age=300',
