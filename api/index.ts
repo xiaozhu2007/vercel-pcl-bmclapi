@@ -1,21 +1,10 @@
 export default async function handler(_request) {
     try {
-    const dashboardResponse = await fetch('https://bd.bangbang93.com/openbmclapi/metric/dashboard');
+    const dashboardResponse = await fetch('https://cdn.crashmc.com/https://bd.bangbang93.com/openbmclapi/metric/dashboard');
     const dashboardData = await dashboardResponse.json();
-  
-    const sponsorResponse = await fetch('https://bmclapi2.bangbang93.com/openbmclapi/sponsor');
+    const sponsorResponse = await fetch('https://cdn.crashmc.com/https://bmclapi2.bangbang93.com/openbmclapi/sponsor');
     const sponsorData = await sponsorResponse.json();
-
-    } catch (e) {
-        return new Response(JSON.stringify({
-            code: 1,
-            msg: e
-        }), {
-            status: 500,
-            headers: {
-                'Cache-Control': 'public, max-age=300',
-       }
-  });}
+    } catch (e) { return new Response(JSON.stringify({ code: 1, msg: e }))}
     const genTime = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
     const load = (dashboardData.load * 100).toFixed(2);
     const curNodes = dashboardData.currentNodes;
