@@ -4,16 +4,19 @@
       "runtime": "vercel-php@0.3.6"
     }
   },
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/api/index.php"
-    }
-  ],
-  "redirects": [
-    { 
-      "source": "/:match*",
-      "destination": "https://www.liuzhen932.top/posts/default/vercel-speedup"
-    }
-  ]
+  "rewrites": [{
+    "source": "/",
+    "destination": "/api/index.php"
+  }],
+  "redirects": [{
+    "source": "/:match*",
+    "destination": "https://www.liuzhen932.top/posts/default/vercel-speedup"
+  }],
+  "headers": [{
+    "source": "/(.*)",
+    "headers": [{
+      "key": "Cache-Control",
+      "value": "public, max-age=300"
+    }]
+  }]
 }
