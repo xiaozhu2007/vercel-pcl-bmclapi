@@ -20,7 +20,7 @@ $sponsor = json_decode(file_get_contents("https://bmclapi2.bangbang93.com/openbm
 $sponsorUrl = $sponsor->{"link"};
 $sponsorId = $sponsor->{"_id"};
 
-header("Content-type: application/xml");  
+header("Content-type: text/plain");  
 header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓存
 ?>
 <Grid>
