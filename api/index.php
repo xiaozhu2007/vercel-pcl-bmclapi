@@ -1,7 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Shanghai");
 $genTime = date("Y-m-d H:i:s");
-header("Content-type: text/plain");  
 
 // 默认信息 - 无法获取时的 Placeholder
 $load = "Error";
@@ -17,14 +16,13 @@ $curNodes = $remote->{"currentNodes"};
 $curBandwidth = round($remote->{"currentBandwidth"}, 2);
 $todayData = round($remote->{"bytes"}/1099511627776, 2);
 $todayHit = $remote->{"hits"};
-
 $sponsor = json_decode(file_get_contents("https://bmclapi2.bangbang93.com/openbmclapi/sponsor"));
 $sponsorUrl = $sponsor->{"link"};
 $sponsorId = $sponsor->{"_id"};
 
+header("Content-type: application/xml");  
 header("Cache-control:public, max-age=300, stale-while-revalidate=120"); // 缓存
 ?>
-
 <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.8*"/>
