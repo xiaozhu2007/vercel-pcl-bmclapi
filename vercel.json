@@ -10,7 +10,7 @@
   }],
   "redirects": [{
     "source": "/:match*",
-    "destination": "https://www.liuzhen932.top/posts/default/vercel-speedup"
+    "destination": "https://blog.liuzhen932.top/posts/vercel-speedup"
   }],
   "headers": [{
     "source": "/(.*)",
